@@ -1,1 +1,121 @@
-[]
+[
+    {
+      "_id": "6bf49896-c32e-4d5e-8392-e88c1e837ab9",
+      "colId": "41cb05bf-dc0c-4bb2-91e9-c0bd4e998eaf",
+      "containerId": "6ff009f9-e78c-4d93-8e8c-ef742f7bc7d1",
+      "name": "Application Add - Personal Borrower, Vehicle",
+      "url": "{{URL}}/Application",
+      "method": "POST",
+      "sortNum": 20000,
+      "created": "2022-12-22T13:12:03.690Z",
+      "modified": "2022-12-22T16:40:37.968Z",
+      "headers": [
+        {
+          "name": "User-Agent",
+          "value": "Thunder Client"
+        },
+        {
+          "name": "Authorization",
+          "value": "{{access_token}}"
+        },
+        {
+          "name": "X-AuthenticationProductCredential",
+          "value": "{{access_token}}"
+        },
+        {
+          "name": "X-Request-ID",
+          "value": "{{X-Request-ID}}"
+        }
+      ],
+      "params": [],
+      "body": {
+        "type": "json",
+        "raw": "{\r\n    \"idApplication\": \"{{#guid}}\",\r\n    \"requestTypeCode\": \"{{processCodeCA}}\",\r\n    \"appNumber\": \"{{#number, 14500, 85000}}\",\r\n    \"source\": \"AppTaker\",\r\n    \"actionCode\": \"{{actionCode}}\",\r\n    \"amountRequested\": \"{{#number, 25000, 100000}}\",\r\n    \"productType\": \"{{productType}}\",\r\n    \"purposeCode\": \"{{purposeCode}}\",\r\n    \"specificPurpose\": \"buy a car\",\r\n    \"securedBy\": \"SecuredOther\",\r\n    \"createLeadFlag\": false,\r\n    \"applicants\": [\r\n        {\r\n            \"idApplicant\": \"{{#guid}}\",\r\n            \"ipAddress\": \"124.99.37.168\",\r\n            \"fullName\": \"Monroe Altenwerth\",\r\n            \"partyType\": \"Personal\",\r\n            \"roleType\": \"Borrower\",\r\n            \"isPrimaryBorrower\":true,\r\n            \"taxIdentifier\": {\r\n                \"tinType\": \"SSN\",\r\n                \"number\": \"293756293\"\r\n            },\r\n            \"emailAddress\": \"Monroe.Altenwerth@mailinator.com\",\r\n            \"preferredPhoneType\": \"Mobile\",\r\n            \"phones\": [\r\n                {\r\n                    \"phoneType\": \"Mobile\",\r\n                    \"phoneNumber\": \"591-916-1758\"\r\n                },\r\n                {\r\n                    \"phoneType\": \"Business\",\r\n                    \"phoneNumber\": \"640-917-3500\"\r\n                },\r\n                {\r\n                    \"phoneType\": \"Personal\",\r\n                    \"phoneNumber\": \"911-486-0490\"\r\n                }\r\n            ],\r\n            \"addressess\": [\r\n                {\r\n                    \"addressBlock\": {\r\n                        \"street1\": \"1001 Durgan Square\",\r\n                        \"street2\": \"\",\r\n                        \"city\": \"Robertsmouth\",\r\n                        \"stateProvince\": \"FL\",\r\n                        \"zipCode\": \"32801\",\r\n                        \"county\": \"Orange\",\r\n                        \"startDate\": \"2014-10-24\"\r\n                    },\r\n                    \"addressType\": \"Current\"\r\n                },\r\n                {\r\n                    \"addressBlock\": {\r\n                        \"street1\": \"175 Jeffry Mountains\",\r\n                        \"street2\": \"\",\r\n                        \"city\": \"East Orange\",\r\n                        \"stateProvince\": \"KY\",\r\n                        \"zipCode\": \"40503\",\r\n                        \"county\": \"Fayette\",\r\n                        \"startDate\": \"2009-10-24\",\r\n                        \"endDate\": \"2014-10-24\"\r\n                    },\r\n                    \"addressType\": \"Previous\"\r\n                },\r\n                {\r\n                    \"addressBlock\": {\r\n                        \"street1\": \"603 Brennon Village\",\r\n                        \"street2\": \"\",\r\n                        \"city\": \"Chetfort\",\r\n                        \"stateProvince\": \"KY\",\r\n                        \"zipCode\": \"40503\",\r\n                        \"county\": \"Fayette\"\r\n                    },\r\n                    \"addressType\": \"Mailing\"\r\n                }\r\n            ],\r\n            \"personalApplicant\": \r\n                {\r\n                    \"personName\": {\r\n                        \"firstName\": \"Monroe\",\r\n                        \"middleName\": \"Jensen\",\r\n                        \"lastName\": \"Altenwerth\"\r\n                    },\r\n                    \"dateofBirth\": \"1969-10-24\",\r\n                    \"usCitizenFlag\": true,\r\n                    \"maritalStatus\": \"Married\",\r\n                    \"housingStatus\": \"Own\",\r\n                    \"monthlyHousingExpense\": 500,\r\n                \"employments\": [  \r\n                    {                        \r\n                    \"employerName\": \"Price LLC\",\r\n                    \"jobTitle\": \"Liaison\",\r\n                    \"employerStatus\": \"Current\",\r\n                    \"employmentStartDate\": \"2010-10-24\",\r\n                    \"employmentType\": \"Fulltime\"                    }\r\n                ]\r\n            }\r\n        }\r\n    ],\r\n    \"collaterals\": [\r\n        {\r\n            \"description\": \"Tesla Plaid\",\r\n            \"collateralType\": \"020\",\r\n            \"marketValue\": 100000,\r\n            \"address\": {\r\n                \"street1\": \"5047 Doyle Fall\",\r\n                \"city\": \"Gilbertside\",\r\n                \"stateProvince\": \"KY\",\r\n                \"zipCode\": \"40503\"\r\n            },\r\n            \"collateralDetails\": {\r\n                \"titled\": {\r\n                    \"titledType\": \"Vehicle\",\r\n                    \"newFlag\": true,\r\n                    \"vehicle\": {\r\n                        \"make\": \"Tesla\",\r\n                        \"model\": \"Plaid\",\r\n                        \"year\": \"2022\",\r\n                        \"trim\": \"Special\",\r\n                        \"color\": \"White\",\r\n                        \"vin\": \"TP817653hHJU98\",\r\n                        \"mileage\": 0\r\n                    }\r\n                }\r\n            }   \r\n        }\r\n    ]\r\n}\r\n\r\n",
+        "form": []
+      },
+      "auth": {
+        "type": "bearer",
+        "bearer": "{{access_token}}"
+      },
+      "tests": [
+        {
+          "type": "res-code",
+          "custom": "",
+          "action": "equal",
+          "value": "200"
+        }
+      ]
+    },
+    {
+      "_id": "b6cf4b79-8572-49c1-82b0-f8875560f971",
+      "colId": "69aea9c8-c5bf-461e-8d6c-70287aa0f5fc",
+      "containerId": "",
+      "name": "Get Token DEV",
+      "url": "https://login.microsoftonline.com/916215fe-f4d7-4657-a141-207fdcde5ada/oauth2/token",
+      "method": "POST",
+      "sortNum": 20000,
+      "created": "2022-12-22T13:21:05.551Z",
+      "modified": "2022-12-22T16:41:21.238Z",
+      "headers": [
+        {
+          "name": "Authorization",
+          "value": "{{access_token}}"
+        },
+        {
+          "name": "X-AuthenticationProductCredential",
+          "value": "{{access_token}}"
+        },
+        {
+          "name": "X-Request-ID",
+          "value": "{{X-Request-ID}}"
+        }
+      ],
+      "params": [],
+      "body": {
+        "type": "formencoded",
+        "raw": "",
+        "form": [
+          {
+            "name": "client_id",
+            "value": "{{client_id}}"
+          },
+          {
+            "name": "client_secret",
+            "value": "{{client_secret}}"
+          },
+          {
+            "name": "grant_type",
+            "value": "{{grant_type}}"
+          },
+          {
+            "name": "scope",
+            "value": "{{scope}}"
+          },
+          {
+            "name": "resource",
+            "value": "{{resource}}"
+          }
+        ]
+      },
+      "tests": [
+        {
+          "type": "res-code",
+          "custom": "",
+          "action": "equal",
+          "value": "200"
+        },
+        {
+          "type": "set-env-var",
+          "custom": "json.access_token",
+          "action": "setto",
+          "value": "{{access_token, global}}"
+        },
+        {
+          "type": "set-env-var",
+          "custom": "json.access_token",
+          "action": "setto",
+          "value": "{{Authorization, global}}"
+        }
+      ]
+    }
+  ]
