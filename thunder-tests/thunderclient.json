@@ -3,12 +3,12 @@
     "_id": "6bf49896-c32e-4d5e-8392-e88c1e837ab9",
     "colId": "41cb05bf-dc0c-4bb2-91e9-c0bd4e998eaf",
     "containerId": "6ff009f9-e78c-4d93-8e8c-ef742f7bc7d1",
-    "name": "Post App - Personal Borrower, Vehicle",
+    "name": "Post App - Test Scripts",
     "url": "{{URL}}/Application",
     "method": "POST",
     "sortNum": 20000,
     "created": "2022-12-22T13:12:03.690Z",
-    "modified": "2022-12-22T17:52:19.623Z",
+    "modified": "2022-12-23T19:20:19.036Z",
     "headers": [
       {
         "name": "User-Agent",
@@ -30,7 +30,7 @@
     "params": [],
     "body": {
       "type": "json",
-      "raw": "{\n    \"idApplication\": \"{{@ |exec(\"uuidFromScript)}},\n    \"requestTypeCode\": \"{{processCodeCA}}\",\n    \"appNumber\": \"{{#number, 14500, 85000}}\",\n    \"source\": \"AppTaker\",\n    \"actionCode\": \"{{actionCode}}\",\n    \"amountRequested\": \"{{#number, 25000, 100000}}\",\n    \"productType\": \"{{productType}}\",\n    \"purposeCode\": \"{{purposeCode}}\",\n    \"specificPurpose\": \"buy a car\",\n    \"securedBy\": \"SecuredOther\",\n    \"createLeadFlag\": false,\n    \"applicants\": [\n        {\n            \"idApplicant\": \"{{#guid}}\",\n            \"ipAddress\": \"124.99.37.168\",\n            \"fullName\": \"Monroe Altenwerth\",\n            \"partyType\": \"Personal\",\n            \"roleType\": \"Borrower\",\n            \"isPrimaryBorrower\":true,\n            \"taxIdentifier\": {\n                \"tinType\": \"SSN\",\n                \"number\": \"293756293\"\n            },\n            \"emailAddress\": \"Monroe.Altenwerth@mailinator.com\",\n            \"preferredPhoneType\": \"Mobile\",\n            \"phones\": [\n                {\n                    \"phoneType\": \"Mobile\",\n                    \"phoneNumber\": \"591-916-1758\"\n                },\n                {\n                    \"phoneType\": \"Business\",\n                    \"phoneNumber\": \"640-917-3500\"\n                },\n                {\n                    \"phoneType\": \"Personal\",\n                    \"phoneNumber\": \"911-486-0490\"\n                }\n            ],\n            \"addressess\": [\n                {\n                    \"addressBlock\": {\n                        \"street1\": \"1001 Durgan Square\",\n                        \"street2\": \"\",\n                        \"city\": \"Robertsmouth\",\n                        \"stateProvince\": \"FL\",\n                        \"zipCode\": \"32801\",\n                        \"county\": \"Orange\",\n                        \"startDate\": \"2014-10-24\"\n                    },\n                    \"addressType\": \"Current\"\n                },\n                {\n                    \"addressBlock\": {\n                        \"street1\": \"175 Jeffry Mountains\",\n                        \"street2\": \"\",\n                        \"city\": \"East Orange\",\n                        \"stateProvince\": \"KY\",\n                        \"zipCode\": \"40503\",\n                        \"county\": \"Fayette\",\n                        \"startDate\": \"2009-10-24\",\n                        \"endDate\": \"2014-10-24\"\n                    },\n                    \"addressType\": \"Previous\"\n                },\n                {\n                    \"addressBlock\": {\n                        \"street1\": \"603 Brennon Village\",\n                        \"street2\": \"\",\n                        \"city\": \"Chetfort\",\n                        \"stateProvince\": \"KY\",\n                        \"zipCode\": \"40503\",\n                        \"county\": \"Fayette\"\n                    },\n                    \"addressType\": \"Mailing\"\n                }\n            ],\n            \"personalApplicant\": \n                {\n                    \"personName\": {\n                        \"firstName\": \"Monroe\",\n                        \"middleName\": \"Jensen\",\n                        \"lastName\": \"Altenwerth\"\n                    },\n                    \"dateofBirth\": \"1969-10-24\",\n                    \"usCitizenFlag\": true,\n                    \"maritalStatus\": \"Married\",\n                    \"housingStatus\": \"Own\",\n                    \"monthlyHousingExpense\": 500,\n                \"employments\": [  \n                    {                        \n                    \"employerName\": \"Price LLC\",\n                    \"jobTitle\": \"Liaison\",\n                    \"employerStatus\": \"Current\",\n                    \"employmentStartDate\": \"2010-10-24\",\n                    \"employmentType\": \"Fulltime\"                    }\n                ]\n            }\n        }\n    ],\n    \"collaterals\": [\n        {\n            \"description\": \"Tesla Plaid\",\n            \"collateralType\": \"020\",\n            \"marketValue\": 100000,\n            \"address\": {\n                \"street1\": \"5047 Doyle Fall\",\n                \"city\": \"Gilbertside\",\n                \"stateProvince\": \"KY\",\n                \"zipCode\": \"40503\"\n            },\n            \"collateralDetails\": {\n                \"titled\": {\n                    \"titledType\": \"Vehicle\",\n                    \"newFlag\": true,\n                    \"vehicle\": {\n                        \"make\": \"Tesla\",\n                        \"model\": \"Plaid\",\n                        \"year\": \"2022\",\n                        \"trim\": \"Special\",\n                        \"color\": \"White\",\n                        \"vin\": \"TP817653hHJU98\",\n                        \"mileage\": 0\n                    }\n                }\n            }   \n        }\n    ]\n}\n\n",
+      "raw": "{\n    \"idApplication\": \"{{#guid}}\",\n    \"requestTypeCode\": \"{{processCodeCA}}\",\n    \"appNumber\": \"{{#number, 14500, 85000}}\",\n    \"source\": \"AppTaker\",\n    \"actionCode\": \"{{actionCode}}\",\n    \"amountRequested\": \"{{#number, 25000, 100000}}\",\n    \"productType\": \"{{productType}}\",\n    \"purposeCode\": \"{{purposeCode}}\",\n    \"specificPurpose\": \"buy a car\",\n    \"securedBy\": \"SecuredOther\",\n    \"createLeadFlag\": false,\n    \"applicants\": [\n        {\n            \"idApplicant\": \"{{#guid}}\",\n            \"ipAddress\": \"124.99.37.168\",\n            \"fullName\": \"{{#name}} {{#name}}\",\n            \"partyType\": \"Personal\",\n            \"roleType\": \"Borrower\",\n            \"isPrimaryBorrower\":true,\n            \"taxIdentifier\": {\n                \"tinType\": \"SSN\",\n                \"number\": \"{{randomTaxID}}\"\n            },\n            \"emailAddress\": \"Monroe.Altenwerth@mailinator.com\",\n            \"preferredPhoneType\": \"{{#enum, Mobile, Business}}\",\n            \"phones\": [\n                {\n                    \"phoneType\": \"Mobile\",\n                    \"phoneNumber\": \"{{mobilePhone}}\"\n                },\n                {\n                    \"phoneType\": \"Business\",\n                    \"phoneNumber\": \"{{bizPhone}}\"\n                },\n                {\n                    \"phoneType\": \"Personal\",\n                    \"phoneNumber\": \"{{personalPhone}}\"\n                }\n            ],\n            \"addressess\": [\n                {\n                    \"addressBlock\": {\n                        \"street1\": \"1001 Durgan Square\",\n                        \"street2\": \"\",\n                        \"city\": \"Robertsmouth\",\n                        \"stateProvince\": \"FL\",\n                        \"zipCode\": \"32801\",\n                        \"county\": \"Orange\",\n                        \"startDate\": \"{{#date,'YYYY-MM-DD', {year: -5}}}\"\n                    },\n                    \"addressType\": \"Current\"\n                },\n                {\n                    \"addressBlock\": {\n                        \"street1\": \"175 Jeffry Mountains\",\n                        \"street2\": \"\",\n                        \"city\": \"East Orange\",\n                        \"stateProvince\": \"KY\",\n                        \"zipCode\": \"40503\",\n                        \"county\": \"Fayette\",\n                        \"startDate\": \"{{#date,'YYYY-MM-DD', {year: -10}}},\",\n                        \"endDate\": \"{{#date,'YYYY-MM-DD', {year: -5}}}\"\n                    },\n                    \"addressType\": \"Previous\"\n                },\n                {\n                    \"addressBlock\": {\n                        \"street1\": \"603 Brennon Village\",\n                        \"street2\": \"\",\n                        \"city\": \"Chetfort\",\n                        \"stateProvince\": \"KY\",\n                        \"zipCode\": \"40503\",\n                        \"county\": \"Fayette\"\n                    },\n                    \"addressType\": \"Mailing\"\n                }\n            ],\n            \"personalApplicant\": \n                {\n                    \"personName\": {\n                        \"firstName\": \"{{#name}}\",\n                        \"middleName\": \"{{#name}}\",\n                        \"lastName\": \"{{#name}}\"\n                    },\n                    \"dateofBirth\": \"{{randomDOB}}\",\n                    \"usCitizenFlag\": true,\n                    \"maritalStatus\": \"{{#enum, Married, Unmarried}}\",\n                    \"housingStatus\": \"{{#enum, Own, Rent}}\",\n                    \"monthlyHousingExpense\": \"{{#number, 500, 8500}}\",\n                \"employments\": [  \n                    {                        \n                    \"employerName\": \"{{#name}} LLC\",\n                    \"jobTitle\": \"Liaison\",\n                    \"employerStatus\": \"Current\",\n                    \"employmentStartDate\": \"{{randomEmpStartDate}}\",\n                    \"employmentType\": \"Fulltime\"                    }\n                ]\n            }\n        }\n    ],\n    \"collaterals\": [\n        {\n            \"description\": \"Tesla Plaid\",\n            \"collateralType\": \"020\",\n            \"marketValue\": 100000,\n            \"address\": {\n                \"street1\": \"5047 Doyle Fall\",\n                \"city\": \"Gilbertside\",\n                \"stateProvince\": \"KY\",\n                \"zipCode\": \"40503\"\n            },\n            \"collateralDetails\": {\n                \"titled\": {\n                    \"titledType\": \"Vehicle\",\n                    \"newFlag\": true,\n                    \"vehicle\": {\n                        \"make\": \"Tesla\",\n                        \"model\": \"Plaid\",\n                        \"year\": \"2022\",\n                        \"trim\": \"Special\",\n                        \"color\": \"{{#enum, White, Blue, Red}}\",\n                        \"vin\": \"TP817653hHJU98\",\n                        \"mileage\": 0\n                    }\n                }\n            }   \n        }\n    ]\n}\n\n",
       "form": []
     },
     "auth": {
@@ -39,10 +39,10 @@
     },
     "tests": [
       {
-        "type": "res-code",
+        "type": "res-body",
         "custom": "",
-        "action": "equal",
-        "value": "200"
+        "action": "isjson",
+        "value": "true"
       }
     ]
   },
@@ -1113,7 +1113,7 @@
     "method": "POST",
     "sortNum": 30000,
     "created": "2022-12-22T17:08:37.720Z",
-    "modified": "2022-12-22T17:15:23.226Z",
+    "modified": "2022-12-22T19:52:24.774Z",
     "headers": [
       {
         "name": "Authorization",
@@ -1146,14 +1146,26 @@
     ],
     "body": {
       "type": "json",
-      "raw": "{\n    \"idApplication\": \"{{#guid}}\",\n    \"requestTypeCode\": \"{{processCodeCA}}\",\n    \"appNumber\": \"{{#number, 14500, 85000}}\",\n    \"source\": \"AppTaker\",\n    \"actionCode\": \"{{actionCode}}\",\n    \"amountRequested\": \"{{#number, 25000, 100000}}\",\n    \"productType\": \"{{productType}}\",\n    \"purposeCode\": \"{{purposeCode}}\",\n    \"specificPurpose\": \"buy a car\",\n    \"securedBy\": \"SecuredOther\",\n    \"createLeadFlag\": true,\n    \"applicants\": [\n        {\n            \"idpplicant\": \"{{$randomUUID}}\",\n            \"ipAddress\": \"{{$randomIP}}\",\n            \"fullName\": \"{{party1FullName}}\",\n            \"partyType\": \"Personal\",\n            \"roleType\": \"Borrower\",\n            \"isPrimaryBorrower\":true,\n            \"taxIdentifier\": {\n                \"tinType\": \"SSN\",\n                \"number\": \"{{randomTIN}}\"\n            },\n            \"emailAddress\": \"{{party1Email}}\",\n            \"preferredPhoneType\": \"Mobile\",\n            \"phones\": [\n                {\n                    \"phoneType\": \"Mobile\",\n                    \"phoneNumber\": \"{{$randomPhoneNumber}}\"\n                },\n                {\n                    \"phoneType\": \"Personal\",\n                    \"phoneNumber\": \"{{$randomPhoneNumber}}\"\n                }\n            ],\n            \"addressess\": [\n                {\n                    \"addressBlock\": {\n                        \"street1\": \"{{$randomStreetAddress}}\",\n                        \"street2\": \"\",\n                        \"city\": \"{{$randomCity}}\",\n                        \"stateProvince\": \"FL\",\n                        \"zipCode\": \"32801\",\n                        \"county\": \"Orange\",\n                        \"startDate\": \"{{randomCurrAddrStartDate}}\"\n                    },\n                    \"addressType\": \"Current\"\n                },\n                {\n                    \"addressBlock\": {\n                        \"street1\": \"{{$randomStreetAddress}}\",\n                        \"street2\": \"\",\n                        \"city\": \"{{$randomCity}}\",\n                        \"stateProvince\": \"KY\",\n                        \"zipCode\": \"40503\",\n                        \"county\": \"Fayette\",\n                        \"startDate\": \"{{randomPrevAddrStartDate}}\",\n                        \"endDate\": \"{{randomCurrAddrStartDate}}\"\n                    },\n                    \"addressType\": \"Previous\"\n                },\n                {\n                    \"addressBlock\": {\n                        \"street1\": \"{{$randomStreetAddress}}\",\n                        \"street2\": \"\",\n                        \"city\": \"{{$randomCity}}\",\n                        \"stateProvince\": \"KY\",\n                        \"zipCode\": \"40503\",\n                        \"county\": \"Fayette\"\n                    },\n                    \"addressType\": \"Mailing\"\n                }\n            ],\n            \"personalApplicant\": \n                {\n                    \"personName\": {\n                        \"firstName\": \"{{party1FirstName}}\",\n                        \"middleName\": \"{{$randomFirstName}}\",\n                        \"lastName\": \"{{party1LastName}}\"\n                    },\n                    \"dateofBirth\": \"{{randomDOB}}\",\n                    \"usCitizenFlag\": true,\n                    \"maritalStatus\": \"Married\",\n                    \"housingStatus\": \"Own\",\n                    \"monthlyHousingExpense\": 500,\n                \"employments\": [  \n                    {                        \n                    \"employerName\": \"{{$randomLastName}}, {{$randomCompanySuffix}}\",\n                    \"jobTitle\": \"{{$randomJobType}}\",\n                    \"employerStatus\": \"Current\",\n                    \"employmentStartDate\": \"{{randomEmpStartDate}}\",\n                    \"employmentType\": \"Fulltime\",\n                    \"grossAnnualBaseIncome\": {{randomEEAmount}},\n                    \"grossAnnualBonus\": {{randomBonusAmount}}\n                    }\n                ]\n            }\n        }\n    ],\n    \"collaterals\": [\n        {\n            \"description\": \"Tesla Plaid\",\n            \"collateralType\": \"{{collateralType_Vehicle}}\",\n            \"marketValue\": {{randomMarketValue}},\n            \"collateralDetails\": {\n                \"titled\": {\n                    \"titledType\": \"Vehicle\",\n                    \"newFlag\": true,\n                    \"vehicle\": {\n                        \"make\": \"Tesla\",\n                        \"model\": \"Plaid\",\n                        \"year\": \"2022\",\n                        \"trim\": \"Special\",\n                        \"color\": \"White\",\n                        \"vin\": \"TP817653hHJU98\",\n                        \"mileage\": {{randomMileage}}\n                    }\n                }\n            }   \n        }\n    ],\n   \"lead\":{\n      \"leadTypeCode\":\"{{leadTypeCode}}\",\n      \"leadCategoryCode\":\"{{leadCategoryCode}}\",\n      \"leadStatusCode\":\"{{leadStatusCode}}\"\n   }\n}\n\n",
+      "raw": "{\n    \"idApplication\": \"{{#guid}}\",\n    \"requestTypeCode\": \"{{processCodeCA}}\",\n    \"appNumber\": \"{{#number, 14500, 85000}}\",\n    \"source\": \"AppTaker\",\n    \"actionCode\": \"{{actionCode}}\",\n    \"amountRequested\": \"{{#number, 25000, 100000}}\",\n    \"productType\": \"{{productType}}\",\n    \"purposeCode\": \"{{purposeCode}}\",\n    \"specificPurpose\": \"buy a car\",\n    \"securedBy\": \"SecuredOther\",\n    \"createLeadFlag\": true,\n    \"applicants\": [\n        {\n            \"idpplicant\": \"{{#guid}}\",\n            \"ipAddress\": \"{{$randomIP}}\",\n            \"fullName\": \"{{party1FullName}}\",\n            \"partyType\": \"Personal\",\n            \"roleType\": \"Borrower\",\n            \"isPrimaryBorrower\":true,\n            \"taxIdentifier\": {\n                \"tinType\": \"SSN\",\n                \"number\": \"{{randomTIN}}\"\n            },\n            \"emailAddress\": \"{{party1Email}}\",\n            \"preferredPhoneType\": \"Mobile\",\n            \"phones\": [\n                {\n                    \"phoneType\": \"Mobile\",\n                    \"phoneNumber\": \"{{$randomPhoneNumber}}\"\n                },\n                {\n                    \"phoneType\": \"Personal\",\n                    \"phoneNumber\": \"{{$randomPhoneNumber}}\"\n                }\n            ],\n            \"addressess\": [\n                {\n                    \"addressBlock\": {\n                        \"street1\": \"{{$randomStreetAddress}}\",\n                        \"street2\": \"\",\n                        \"city\": \"{{$randomCity}}\",\n                        \"stateProvince\": \"FL\",\n                        \"zipCode\": \"32801\",\n                        \"county\": \"Orange\",\n                        \"startDate\": \"{{randomCurrAddrStartDate}}\"\n                    },\n                    \"addressType\": \"Current\"\n                },\n                {\n                    \"addressBlock\": {\n                        \"street1\": \"{{$randomStreetAddress}}\",\n                        \"street2\": \"\",\n                        \"city\": \"{{$randomCity}}\",\n                        \"stateProvince\": \"KY\",\n                        \"zipCode\": \"40503\",\n                        \"county\": \"Fayette\",\n                        \"startDate\": \"{{randomPrevAddrStartDate}}\",\n                        \"endDate\": \"{{randomCurrAddrStartDate}}\"\n                    },\n                    \"addressType\": \"Previous\"\n                },\n                {\n                    \"addressBlock\": {\n                        \"street1\": \"{{$randomStreetAddress}}\",\n                        \"street2\": \"\",\n                        \"city\": \"{{$randomCity}}\",\n                        \"stateProvince\": \"KY\",\n                        \"zipCode\": \"40503\",\n                        \"county\": \"Fayette\"\n                    },\n                    \"addressType\": \"Mailing\"\n                }\n            ],\n            \"personalApplicant\": \n                {\n                    \"personName\": {\n                        \"firstName\": \"{{party1FirstName}}\",\n                        \"middleName\": \"{{$randomFirstName}}\",\n                        \"lastName\": \"{{party1LastName}}\"\n                    },\n                    \"dateofBirth\": \"{{randomDOB}}\",\n                    \"usCitizenFlag\": true,\n                    \"maritalStatus\": \"Married\",\n                    \"housingStatus\": \"Own\",\n                    \"monthlyHousingExpense\": 500,\n                \"employments\": [  \n                    {                        \n                    \"employerName\": \"{{$randomLastName}}, {{$randomCompanySuffix}}\",\n                    \"jobTitle\": \"{{$randomJobType}}\",\n                    \"employerStatus\": \"Current\",\n                    \"employmentStartDate\": \"{{randomEmpStartDate}}\",\n                    \"employmentType\": \"Fulltime\",\n                    \"grossAnnualBaseIncome\": \"{{#number, 25000, 100000}}\",\n                    \"grossAnnualBonus\": \"{{#number, 25000, 100000}}\"\n                    }\n                ]\n            }\n        }\n    ],\n    \"collaterals\": [\n        {\n            \"description\": \"Tesla Plaid\",\n            \"collateralType\": \"{{collateralType_Vehicle}}\",\n            \"marketValue\": \"{{#number, 125000, 200000}}\",\n            \"collateralDetails\": {\n                \"titled\": {\n                    \"titledType\": \"Vehicle\",\n                    \"newFlag\": true,\n                    \"vehicle\": {\n                        \"make\": \"Tesla\",\n                        \"model\": \"Plaid\",\n                        \"year\": \"2022\",\n                        \"trim\": \"Special\",\n                        \"color\": \"White\",\n                        \"vin\": \"TP817653hHJU98\",\n                        \"mileage\": 10000\n                    }\n                }\n            }   \n        }\n    ],\n   \"lead\":{\n      \"leadTypeCode\":\"{{leadTypeCode}}\",\n      \"leadCategoryCode\":\"{{leadCategoryCode}}\",\n      \"leadStatusCode\":\"{{leadStatusCode}}\"\n   }\n}\n\n",
       "form": []
     },
     "auth": {
       "type": "bearer",
       "bearer": "{{access_token}}"
     },
-    "tests": []
+    "tests": [
+      {
+        "type": "res-body",
+        "custom": "",
+        "action": "equal",
+        "value": ""
+      }
+    ],
+    "preReq": {
+      "runFilters": [
+        "setEnvVariables"
+      ]
+    }
   },
   {
     "_id": "a62f3f71-4889-4967-a7b6-532d444f2d1d",
@@ -3022,5 +3034,99 @@
     "auth": {
       "type": "none"
     }
+  },
+  {
+    "_id": "917d2947-76b2-44c3-8d84-d15cd0394bc4",
+    "colId": "41cb05bf-dc0c-4bb2-91e9-c0bd4e998eaf",
+    "containerId": "6ff009f9-e78c-4d93-8e8c-ef742f7bc7d1",
+    "name": "Post App - Personal Borrower, Vehicle Copy",
+    "url": "{{URL}}/Application",
+    "method": "POST",
+    "sortNum": 25000,
+    "created": "2022-12-22T19:35:03.080Z",
+    "modified": "2022-12-22T19:35:03.080Z",
+    "headers": [
+      {
+        "name": "User-Agent",
+        "value": "Thunder Client"
+      },
+      {
+        "name": "Authorization",
+        "value": "{{access_token}}"
+      },
+      {
+        "name": "X-AuthenticationProductCredential",
+        "value": "{{access_token}}"
+      },
+      {
+        "name": "X-Request-ID",
+        "value": "{{X-Request-ID}}"
+      }
+    ],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n    \"idApplication\": \"{{#guid}}\",\n    \"requestTypeCode\": \"{{processCodeCA}}\",\n    \"appNumber\": \"{{#number, 14500, 85000}}\",\n    \"source\": \"AppTaker\",\n    \"actionCode\": \"{{actionCode}}\",\n    \"amountRequested\": \"{{#number, 25000, 100000}}\",\n    \"productType\": \"{{productType}}\",\n    \"purposeCode\": \"{{purposeCode}}\",\n    \"specificPurpose\": \"buy a car\",\n    \"securedBy\": \"SecuredOther\",\n    \"createLeadFlag\": false,\n    \"applicants\": [\n        {\n            \"idApplicant\": \"{{#guid}}\",\n            \"ipAddress\": \"124.99.37.168\",\n            \"fullName\": \"Monroe Altenwerth\",\n            \"partyType\": \"Personal\",\n            \"roleType\": \"Borrower\",\n            \"isPrimaryBorrower\":true,\n            \"taxIdentifier\": {\n                \"tinType\": \"SSN\",\n                \"number\": \"293756293\"\n            },\n            \"emailAddress\": \"Monroe.Altenwerth@mailinator.com\",\n            \"preferredPhoneType\": \"Mobile\",\n            \"phones\": [\n                {\n                    \"phoneType\": \"Mobile\",\n                    \"phoneNumber\": \"591-916-1758\"\n                },\n                {\n                    \"phoneType\": \"Business\",\n                    \"phoneNumber\": \"640-917-3500\"\n                },\n                {\n                    \"phoneType\": \"Personal\",\n                    \"phoneNumber\": \"911-486-0490\"\n                }\n            ],\n            \"addressess\": [\n                {\n                    \"addressBlock\": {\n                        \"street1\": \"1001 Durgan Square\",\n                        \"street2\": \"\",\n                        \"city\": \"Robertsmouth\",\n                        \"stateProvince\": \"FL\",\n                        \"zipCode\": \"32801\",\n                        \"county\": \"Orange\",\n                        \"startDate\": \"2014-10-24\"\n                    },\n                    \"addressType\": \"Current\"\n                },\n                {\n                    \"addressBlock\": {\n                        \"street1\": \"175 Jeffry Mountains\",\n                        \"street2\": \"\",\n                        \"city\": \"East Orange\",\n                        \"stateProvince\": \"KY\",\n                        \"zipCode\": \"40503\",\n                        \"county\": \"Fayette\",\n                        \"startDate\": \"2009-10-24\",\n                        \"endDate\": \"2014-10-24\"\n                    },\n                    \"addressType\": \"Previous\"\n                },\n                {\n                    \"addressBlock\": {\n                        \"street1\": \"603 Brennon Village\",\n                        \"street2\": \"\",\n                        \"city\": \"Chetfort\",\n                        \"stateProvince\": \"KY\",\n                        \"zipCode\": \"40503\",\n                        \"county\": \"Fayette\"\n                    },\n                    \"addressType\": \"Mailing\"\n                }\n            ],\n            \"personalApplicant\": \n                {\n                    \"personName\": {\n                        \"firstName\": \"Monroe\",\n                        \"middleName\": \"Jensen\",\n                        \"lastName\": \"Altenwerth\"\n                    },\n                    \"dateofBirth\": \"1969-10-24\",\n                    \"usCitizenFlag\": true,\n                    \"maritalStatus\": \"Married\",\n                    \"housingStatus\": \"Own\",\n                    \"monthlyHousingExpense\": 500,\n                \"employments\": [  \n                    {                        \n                    \"employerName\": \"Price LLC\",\n                    \"jobTitle\": \"Liaison\",\n                    \"employerStatus\": \"Current\",\n                    \"employmentStartDate\": \"2010-10-24\",\n                    \"employmentType\": \"Fulltime\"                    }\n                ]\n            }\n        }\n    ],\n    \"collaterals\": [\n        {\n            \"description\": \"Tesla Plaid\",\n            \"collateralType\": \"020\",\n            \"marketValue\": 100000,\n            \"address\": {\n                \"street1\": \"5047 Doyle Fall\",\n                \"city\": \"Gilbertside\",\n                \"stateProvince\": \"KY\",\n                \"zipCode\": \"40503\"\n            },\n            \"collateralDetails\": {\n                \"titled\": {\n                    \"titledType\": \"Vehicle\",\n                    \"newFlag\": true,\n                    \"vehicle\": {\n                        \"make\": \"Tesla\",\n                        \"model\": \"Plaid\",\n                        \"year\": \"2022\",\n                        \"trim\": \"Special\",\n                        \"color\": \"White\",\n                        \"vin\": \"TP817653hHJU98\",\n                        \"mileage\": 0\n                    }\n                }\n            }   \n        }\n    ]\n}\n\n",
+      "form": []
+    },
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{access_token}}"
+    },
+    "tests": [
+      {
+        "type": "res-code",
+        "custom": "",
+        "action": "equal",
+        "value": "200"
+      }
+    ]
+  },
+  {
+    "_id": "16211e4c-3102-48a5-ac8d-4caa47710a02",
+    "colId": "41cb05bf-dc0c-4bb2-91e9-c0bd4e998eaf",
+    "containerId": "6ff009f9-e78c-4d93-8e8c-ef742f7bc7d1",
+    "name": "Post App - Test CSV File",
+    "url": "{{URL}}/Application",
+    "method": "POST",
+    "sortNum": 22500,
+    "created": "2022-12-23T18:58:17.964Z",
+    "modified": "2022-12-23T19:00:18.500Z",
+    "headers": [
+      {
+        "name": "User-Agent",
+        "value": "Thunder Client"
+      },
+      {
+        "name": "Authorization",
+        "value": "{{access_token}}"
+      },
+      {
+        "name": "X-AuthenticationProductCredential",
+        "value": "{{access_token}}"
+      },
+      {
+        "name": "X-Request-ID",
+        "value": "{{X-Request-ID}}"
+      }
+    ],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n    \"idApplication\": \"{{#guid}}\",\n    \"requestTypeCode\": \"{{processCodeCA}}\",\n    \"appNumber\": \"{{#number, 14500, 85000}}\",\n    \"source\": \"AppTaker\",\n    \"actionCode\": \"{{actionCode}}\",\n    \"amountRequested\": \"{{#number, 25000, 100000}}\",\n    \"productType\": \"{{productType}}\",\n    \"purposeCode\": \"{{purposeCode}}\",\n    \"specificPurpose\": \"buy a car\",\n    \"securedBy\": \"SecuredOther\",\n    \"createLeadFlag\": false,\n    \"applicants\": [\n        {\n            \"idApplicant\": \"{{#guid}}\",\n            \"ipAddress\": \"124.99.37.168\",\n            \"fullName\": \"{{fullName}}\",\n            \"partyType\": \"Personal\",\n            \"roleType\": \"Borrower\",\n            \"isPrimaryBorrower\":true,\n            \"taxIdentifier\": {\n                \"tinType\": \"SSN\",\n                \"number\": \"{{randomTaxID}}\"\n            },\n            \"emailAddress\": \"Monroe.Altenwerth@mailinator.com\",\n            \"preferredPhoneType\": \"{{#enum, Mobile, Business}}\",\n            \"phones\": [\n                {\n                    \"phoneType\": \"Mobile\",\n                    \"phoneNumber\": \"{{mobilePhone}}\"\n                },\n                {\n                    \"phoneType\": \"Business\",\n                    \"phoneNumber\": \"{{bizPhone}}\"\n                },\n                {\n                    \"phoneType\": \"Personal\",\n                    \"phoneNumber\": \"{{personalPhone}}\"\n                }\n            ],\n            \"addressess\": [\n                {\n                    \"addressBlock\": {\n                        \"street1\": \"{{street1}}\",\n                        \"street2\": \"\",\n                        \"city\": \"Robertsmouth\",\n                        \"stateProvince\": \"FL\",\n                        \"zipCode\": \"32801\",\n                        \"county\": \"Orange\",\n                        \"startDate\": \"{{#date,'YYYY-MM-DD', {year: -5}}}\"\n                    },\n                    \"addressType\": \"Current\"\n                },\n                {\n                    \"addressBlock\": {\n                        \"street1\": \"175 Jeffry Mountains\",\n                        \"street2\": \"\",\n                        \"city\": \"East Orange\",\n                        \"stateProvince\": \"KY\",\n                        \"zipCode\": \"40503\",\n                        \"county\": \"Fayette\",\n                        \"startDate\": \"{{#date,'YYYY-MM-DD', {year: -10}}},\",\n                        \"endDate\": \"{{#date,'YYYY-MM-DD', {year: -5}}}\"\n                    },\n                    \"addressType\": \"Previous\"\n                },\n                {\n                    \"addressBlock\": {\n                        \"street1\": \"603 Brennon Village\",\n                        \"street2\": \"\",\n                        \"city\": \"Chetfort\",\n                        \"stateProvince\": \"KY\",\n                        \"zipCode\": \"40503\",\n                        \"county\": \"Fayette\"\n                    },\n                    \"addressType\": \"Mailing\"\n                }\n            ],\n            \"personalApplicant\": \n                {\n                    \"personName\": {\n                        \"firstName\": \"{{#name}}\",\n                        \"middleName\": \"{{#name}}\",\n                        \"lastName\": \"{{#name}}\"\n                    },\n                    \"dateofBirth\": \"{{randomDOB}}\",\n                    \"usCitizenFlag\": true,\n                    \"maritalStatus\": \"{{#enum, Married, Unmarried}}\",\n                    \"housingStatus\": \"{{#enum, Own, Rent}}\",\n                    \"monthlyHousingExpense\": \"{{#number, 500, 8500}}\",\n                \"employments\": [  \n                    {                        \n                    \"employerName\": \"{{#name}} LLC\",\n                    \"jobTitle\": \"Liaison\",\n                    \"employerStatus\": \"Current\",\n                    \"employmentStartDate\": \"{{randomEmpStartDate}}\",\n                    \"employmentType\": \"Fulltime\"                    }\n                ]\n            }\n        }\n    ],\n    \"collaterals\": [\n        {\n            \"description\": \"Tesla Plaid\",\n            \"collateralType\": \"020\",\n            \"marketValue\": 100000,\n            \"address\": {\n                \"street1\": \"5047 Doyle Fall\",\n                \"city\": \"Gilbertside\",\n                \"stateProvince\": \"KY\",\n                \"zipCode\": \"40503\"\n            },\n            \"collateralDetails\": {\n                \"titled\": {\n                    \"titledType\": \"Vehicle\",\n                    \"newFlag\": true,\n                    \"vehicle\": {\n                        \"make\": \"Tesla\",\n                        \"model\": \"Plaid\",\n                        \"year\": \"2022\",\n                        \"trim\": \"Special\",\n                        \"color\": \"White\",\n                        \"vin\": \"TP817653hHJU98\",\n                        \"mileage\": 0\n                    }\n                }\n            }   \n        }\n    ]\n}\n\n",
+      "form": []
+    },
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{access_token}}"
+    },
+    "tests": [
+      {
+        "type": "res-body",
+        "custom": "",
+        "action": "isjson",
+        "value": "true"
+      }
+    ]
   }
 ]

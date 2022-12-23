@@ -2,53 +2,59 @@
 /// copy tc-types.d.ts file for vscode autocompletion on tc object
 /// <reference path="./tc-types.d.ts" />
 
-// built-in node modules
-const CryptoJS = require("crypto-js");
-const { v4: uuid4 } = require("uuid");
-// var papa = require("papaparse");
-// var url = require('url');
-
-function appendString(input, param1) {
-
-    console.log("func testing:", input, param1);
-
-    return `${input} ${param1}`;
+function randomNumber(min, max) { 
+    return Math.floor(Math.random() * (max - min) + min);
 }
 
-function customHmac(input) {
-    console.log("running custom hmac");
-    var secretValue = tc.getVar("secret");
+function setEnvVariables() {
 
-    let encoded = CryptoJS.HmacSHA256(input, secretValue);
-    return encoded.toString(CryptoJS.enc.Base64);
+const bizPhoneAreaCode = randomNumber (212,941)
+const bizPhone3Digits = randomNumber (111,999)
+const bizPhone4Digits = randomNumber (1111,9999)
+const bizPhoneFormatted = bizPhoneAreaCode+"-"+bizPhone3Digits+"-"+bizPhone4Digits
+tc.setVar("bizPhone", bizPhoneFormatted);
+///console.log("Party1 bizPhone:", bizPhoneFormatted);
+
+const mobilePhoneAreaCode = randomNumber (212,941)
+const mobilePhone3Digits = randomNumber (111,999)
+const mobilePhone4Digits = randomNumber (1111,9999)
+const mobilePhoneFormatted = mobilePhoneAreaCode+"-"+mobilePhone3Digits+"-"+mobilePhone4Digits
+tc.setVar("mobilePhone", mobilePhoneFormatted);
+///console.log("Party1 mobilePhone:", mobilePhoneFormatted);
+
+const personalPhoneAreaCode = randomNumber (212,941)
+const personalPhone3Digits = randomNumber (111,999)
+const personalPhone4Digits = randomNumber (1111,9999)
+const personalPhoneFormatted = personalPhoneAreaCode+"-"+personalPhone3Digits+"-"+personalPhone4Digits
+tc.setVar("personalPhone", personalPhoneFormatted);
+///console.log("Party1 personalPhone:", personalPhoneFormatted);
+
+const homePhoneAreaCode = randomNumber (212,941)
+const homePhone3Digits = randomNumber (111,999)
+const homePhone4Digits = randomNumber (1111,9999)
+const homePhoneFormatted = homePhoneAreaCode+"-"+homePhone3Digits+"-"+homePhone4Digits
+tc.setVar("homePhone", homePhoneFormatted);
+///console.log("Party1 homePhone:", homePhoneFormatted);
+
+const randomMonth = randomNumber (10,12)
+const randomDay = randomNumber (10,30)
+const randomBirthYear = randomNumber (1945,1995)
+const randomDOB = randomBirthYear+"-"+randomMonth+"-"+randomDay
+tc.setVar("randomDOB", randomDOB);
+///console.log("Party1 DOB:", randomDOB);
+
+const randomTaxID = randomNumber (111111111,999999999)
+tc.setVar("randomTaxID", randomTaxID);
+///console.log("Party1 TIN:", randomTaxID);
+
+const randomEmpStartYear = randomNumber (2007,2020)
+const randomEmpStartDate = randomEmpStartYear+"-"+randomMonth+"-"+randomDay
+tc.setVar("randomEmpStartDate", randomEmpStartDate);
+///console.log("Party1 randomEmpStartDate:", randomEmpStartDate);
+
+const randomBizFormedYear = randomNumber (1986,2021)
+const randomBizFormedDate = randomBizFormedYear+"-"+randomMonth+"-"+randomDay
+tc.setVar("randomBizFormedDate", randomBizFormedDate);
+///console.log("Party1 randomBizFormedDate:", randomBizFormedDate);
 }
-
-function preFilter1() {
-
-    console.log("set env variable example");
-    let uuid = uuid4();
-
-    // ---- save to active environment
-    tc.setVar("uuidFromScript", uuid);
-
-    // ---- save to local environment
-    // tc.setVar("uuidFromScript", uuid, "local");
-
-    // ---- save to global environment
-    // tc.setVar("uuidFromScript", uuid, "global");
-}
-
-async function customFilter(input) {
-    console.log("Loading node module - moment");
-
-    // ---- load any node module from npm registry
-    // the first run will take few seconds as it needs to download the module from npm registry
-    var moment = await tc.loadModule("moment");
-
-    // ---- load specific version of moment
-    // var moment = await tc.loadModule("moment", "2.29.1");
-
-    return `${input} ${moment().format()}`;
-}
-
-module.exports = [customHmac, appendString, preFilter1, customFilter];
+module.exports = [randomNumber, setEnvVariables];
